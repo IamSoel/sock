@@ -6,7 +6,7 @@ def scrape_todayprice():
     #todaysprice data nepalstock
     #dateformat=2021-4-1(yyyy-m-d)
     url='http://www.nepalstock.com/todaysprice/?startDate&stock-symbol=&_limit=300'
-    page=requests.get(url)
+    page=requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36'})
     soup=BeautifulSoup(page.content,'html.parser')
 
     names=soup.select("tr.unique td")
