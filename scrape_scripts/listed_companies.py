@@ -30,7 +30,6 @@ def scrape_listedcompanies():
         df = df.append(a_series, ignore_index=True)
 
     listedCompanies = df.to_json(orient = 'records')
-
     return listedCompanies
     # print(type(listedCompanies))
 scrape_listedcompanies()
