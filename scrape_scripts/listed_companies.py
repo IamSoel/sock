@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+
 import json
 
 def scrape_listedcompanies():
@@ -30,6 +31,10 @@ def scrape_listedcompanies():
         df = df.append(a_series, ignore_index=True)
 
     listedCompanies = df.to_json(orient = 'records')
+
+    # return listedCompanies
+    print(listedCompanies)
+
     return listedCompanies
     # print(type(listedCompanies))
 scrape_listedcompanies()
