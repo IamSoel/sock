@@ -1,7 +1,7 @@
-import email
 from bs4 import BeautifulSoup
 import requests
 import json
+
 
 
 def scrape_companydetail(url):
@@ -84,7 +84,7 @@ def scrape_companydetail(url):
         }
 
     companyDetail = json.dumps(companydetail_dict, indent = 4)
-    # print(companyDetail)
+    print(companyDetail)
 
-url="http://www.nepalstock.com/company/display/2753"
-scrape_companydetail(url)
+# url="http://www.nepalstock.com/company/display/2753"
+# scrape_companydetail(url)

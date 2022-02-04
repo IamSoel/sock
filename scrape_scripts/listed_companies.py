@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-import json
+
 
 def scrape_listedcompanies():
     url='http://www.nepalstock.com/company/index/?_limit=400'
@@ -31,7 +31,7 @@ def scrape_listedcompanies():
 
     listedCompanies = df.to_json(orient = 'records')
 
-    return listedCompanies
-    # print(type(listedCompanies))
+    # return listedCompanies
+    print(listedCompanies)
 scrape_listedcompanies()
 

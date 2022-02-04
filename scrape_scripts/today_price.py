@@ -28,6 +28,6 @@ def scrape_todayprice():
         df = df.append(a_series, ignore_index=True)
 
     todayPrice = df.to_json(orient = 'records')
-    # print(todayPrice)
-    return todayPrice
+    print(todayPrice)
+    # return todayPrice
 # scrape_todayprice()
